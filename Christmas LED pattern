@@ -1,3 +1,5 @@
+# This pattern uses analog pins 8, 12, 13, 14, 15, 16 and the microbit LED display.
+
 def lightP8():
     i = 0
     while i < 1023: 
