@@ -1,0 +1,105 @@
+def lightP8():
+    i = 0
+    while i < 1023: 
+        pins.analog_write_pin(AnalogPin.P8, i)
+        pause(100)
+        i += 50
+
+def dimP8():
+    i = 1023
+    while i > 0:
+            pins.analog_write_pin(AnalogPin.P8, i)
+            pause(100)
+            i-= 50
+def lightP12():
+    i = 0
+    while i < 1023: 
+        pins.analog_write_pin(AnalogPin.P12, i)
+        pause(100)
+        i += 50
+
+def dimP12():
+    i = 1023
+    while i > 0:
+            pins.analog_write_pin(AnalogPin.P12, i)
+            pause(100)
+            i-= 50
+def lightP13():
+    i = 0
+    while i < 1023: 
+        pins.analog_write_pin(AnalogPin.P13, i)
+        pause(100)
+        i += 50
+
+def dimP13():
+    i = 1023
+    while i > 0:
+            pins.analog_write_pin(AnalogPin.P13, i)
+            pause(100)
+            i-= 50
+
+def lightP16():
+    i = 0
+    while i < 1023:
+        pins.analog_write_pin(AnalogPin.P16, i)
+        pause(100)
+        i += 50
+
+def dimP16():
+    i = 1023
+    while i > 0:
+            pins.analog_write_pin(AnalogPin.P16, i)
+            pause(100)
+            i-= 50
+def lightP14():
+    i = 0
+    while i < 1023: 
+        pins.analog_write_pin(AnalogPin.P14, i)
+        pause(100)
+        i += 50
+
+def dimP14():
+    i = 1023
+    while i > 0:
+            pins.analog_write_pin(AnalogPin.P14, i)
+            pause(100)
+            i-= 50
+def lightP15():
+    i = 0
+    while i < 1023: 
+        pins.analog_write_pin(AnalogPin.P15, i)
+        pause(100)
+        i += 50
+
+def dimP15():
+    i = 1023
+    while i > 0:
+            pins.analog_write_pin(AnalogPin.P15, i)
+            pause(100)
+            i-= 50
+
+
+def on_forever():
+    basic.show_leds("""
+            . . . . .
+            . . # . .
+            . # # # .
+            # # # # #
+            . . # . .
+            """)
+
+
+    lightP8()
+    lightP12()
+    lightP13()
+    lightP16()
+    lightP14()
+    lightP15()
+    dimP8()
+    dimP12()
+    dimP13()
+    dimP16()
+    dimP14()
+    dimP15()
+
+basic.forever(on_forever)
